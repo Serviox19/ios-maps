@@ -1,21 +1,27 @@
 import React, { Component } from 'react';
 import { StyleSheet, Text, View } from 'react-native';
+import Header from './src/components/Header';
+import Map from './src/components/Map';
 
-export default class App extends Component {
+class App extends Component {
   render() {
     return (
-      <View style={styles.container}>
-        <Text>This is my iOS Maps App</Text>
+      <View style={styles.viewContainer}>
+        <Header
+          headerText="App"
+        />
+        <Map />
       </View>
     );
   }
 }
 
+
+export default App;
+
 const styles = StyleSheet.create({
-  container: {
+  viewContainer: {
     flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
+    flexDirection: 'column'
+  }
 });
